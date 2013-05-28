@@ -15,8 +15,8 @@ Gives you the following classes:
 - .l-row
 - .l-row.l-compact (for rows without top & bottom margin)
 - .l-cell (an .l-row has `gridColumnCount` cells)
-- .l-cell.l-span-*n* (where `n = [2..gridColumnCount]` when you need cells spanning multiple columns)
-- .l-cell.l-offset-*n* (where `n = [1..(gridColumnCount - 1)]` when you need an offset before a cell)
+- .l-cell.l-span-n (where `n = [2..gridColumnCount]` when you need cells spanning multiple columns)
+- .l-cell.l-offset-n (where `n = [1..(gridColumnCount - 1)]` when you need an offset before a cell)
 
 ## Usage
 
