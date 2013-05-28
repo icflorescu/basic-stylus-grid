@@ -1,0 +1,33 @@
+////  A very simple grid system based on Stylus with Nib extensions
+
+// Defaults
+
+gridColumnCount ?= 12
+gridColumnWidth ?= 60
+gridPadding     ?= 20
+
+// Grid, row, cell
+
+.l-grid
+  width unit(gridColumnCount * (gridColumnWidth + gridPadding), px)
+  margin 0 auto
+
+.l-row
+  margin unit(gridPadding, px) 0
+  clearfix()
+  &.l-compact
+    margin 0 0
+
+.l-cell
+  float left
+  display inline
+  margin 0 unit(gridPadding / 2, px)
+
+  // Generate span & offset classes
+  for i in 1..gridColumnCount
+    unless i is 1
+      &.l-span-{i}
+        width unit(i * gridColumnWidth + (i - 1) * gridPadding, px)
+    unless i is gridColumnCount
+      &.l-offset-{i}
+        margin-left unit(gridPadding / 2 + i * (gridColumnWidth + gridPadding), px)
