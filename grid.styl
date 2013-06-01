@@ -24,6 +24,9 @@ gridPadding     ?= 20
   width (gridColumnWidth)px
   margin 0 unit(gridPadding / 2, px)
 
+  .l-row
+    margin 0 unit(-(gridPadding / 2), px) unit(gridPadding, px)
+
   // Generate span & offset classes
   for i in 1..gridColumnCount
     unless i is 1
