@@ -26,6 +26,8 @@ gridPadding     ?= 20
 
   .l-row
     margin 0 unit(-(gridPadding / 2), px) unit(gridPadding, px)
+    &.l-compact
+      margin-bottom 0
 
   // Generate span & offset classes
   for i in 1..gridColumnCount
