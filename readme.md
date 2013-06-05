@@ -48,6 +48,32 @@ Then, in your HTMLs, you can use the generated classes like this:
       </div>
     </div>
 
+Rows can also be nested, like this:
+
+    <div class="l-grid">
+      <div class="l-row">
+        <div class="l-cell">
+        <div class="l-cell">
+        ...
+        <div class="l-cell">
+      </div>
+      <div class="l-row">
+        <div class="l-cell l-offset-3">
+        <div class="l-cell l-offset-1 l-span-2">
+
+          <!-- Nested row -->
+          <div class="l-row l-compact">
+            <div class="l-cell">Nested cell content 1</div>
+            <div class="l-cell">Nested cell content 2</div>
+            ...
+            <div class="l-cell">
+          </div>
+
+        ...
+        <div class="l-cell">
+      </div>
+    </div>
+
 ## Note
 This is not an npm module.
 
